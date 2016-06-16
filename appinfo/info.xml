@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<info>
+	<id>user_pam</id>
+	<name>Unix PAM backend</name>
+	<description>Authenticate users by PAM according a unix group - Based on Unix user backend app</description>
+	<licence>MIT</licence>
+	<author>CSharplie</author>
+	<version>0.1</version>
+	<dependencies>
+		<owncloud min-version="8.0" max-version="9.0" />
+	</dependencies>
+	<types>
+		<logging/>
+	</types>
+</info>

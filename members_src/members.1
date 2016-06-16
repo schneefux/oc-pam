@@ -1,0 +1,59 @@
+.TH MEMBERS 1 
+.\" NAME should be all caps, SECTION should be 1-8, maybe w/ subsection
+.\" other parms are allowed: see man(7), man(1)
+.SH NAME
+members \- outputs members of a group
+.SH SYNOPSIS
+.B members
+.I "groupname"
+.SH "DESCRIPTION"
+This manual page documents briefly the
+.BR members
+commands.
+This manual page was written for the Debian GNU/Linux distribution.
+.PP
+.B members
+is a program that sends a space-separated list of secondary member names
+to its standard output.
+.SH OPTIONS
+The programs follow the usual GNU command line syntax, with long
+options starting with two dashes (`-').
+A summary of options is included below.
+.\" For a complete description, see the Info files.
+.TP
+.B \-a, \-\-all
+Show all group members on one line. This is the default.
+.TP
+.B \-p, \-\-primary
+Show only primary group members.
+.TP
+.B \-s, \-\-secondary
+Show only secondary group members.
+.TP
+.B \-t, \-\-two-lines
+Send two lines to standard output. First line is primary members, second
+line is secondary members. NOTE: This always displays two lines, even if
+there are no members at all.
+.TP
+.B \-h, \-\-help
+Show summary of options.
+.\" .TP
+.\" .B \-v, \-\-version
+.\" Show version of program.
+.SH DIAGNOSTICS
+.PP
+Exit status is 0 (i.e. "success") if the group was found,
+and 1 (i.e., "failure") if the group was not found.
+.PP
+Technically, the exit status hinges on the output of
+.B getgrnam(3)
+as follows: if 
+.B getgrnam(3)
+returns a null pointer, the exit status is 1, and 0 otherwise.
+.SH BUGS
+I don't know of any! If you find one, please let me know!
+.SH "SEE ALSO"
+groups(1)
+.SH AUTHOR
+This manual page was written by Jim Lynch <jim@laney.edu>,
+for the Debian GNU/Linux system (but may be used by others).
